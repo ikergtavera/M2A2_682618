@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <title>Formulario: Registro al Torneo de Videojuegos</title>
+</head>
+<body>
 
+    <form action="#" method="POST">
+        <table border="1" style="border-collapse: collapse; padding: 5px;">
+            <tr>
+                <td><label for="nombre">Nombre del jugador:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required minlength="3" maxlength="15"></td>
+            </tr>
+            <tr>
+                <td><label for="correo">Correo:</label></td>
+                <td><input type="email" id="correo" name="correo" required></td>
+            </tr>
+            <tr>
+                <td><label for="edad">Edad:</label></td>
+                <td><input type="number" id ="edad" name="edad" required min="12" max="40"></td>
+            </tr>
+            <tr>
+                <td><label for="nickname">Nickname:</label></td>
+                <td><input type="text" id="nickname" name="nickname" required pattern="[A-Za-z0-9]+" title="Solom letras y numeros"></td>
+            </tr>
+            <tr>
+                <td>Categoría:</td>
+                <td>
+                    <input type="radio" id="principiante" name="categoria" value="Principiante" required>
+                    <label for="principiante">Principiante</label>
+
+                    <input type="radio" id="intermedio" name="categoria" value="Intermedio" required>
+                    <label for="intermedio">Intermedio</label>
+
+                    <input type="radio" id="experto" name="categoria" value="Experto" required>
+                    <label for="experto">Experto</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Juegos favoritos:</td>
+                <td>
+                    <input type="checkbox" id="gta5" name="juegos" value="GTA V">
+                    <label for="gta5">GTA V</label>
+
+                    <input type="checkbox" id="fable3" name="juegos" value="Fable III">
+                    <label for="fable3">Fable III</label>
+
+                    <input type="checkbox" id="reddeadredemption2" name="juegos" value="Red Dead Redemption 2">
+                    <label for="reddeadredemption2">Red Dead Redemption 2</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for ="fecha">Fecha inscripción:</label></td>
+                <td><input type="date" id="fecha" name="fecha" required min="2026-09-01" max="2026-09-31"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; padding: 10 px;">
+                    <input type ="submit" value="Enviar">
+                    <input type ="reset" value="Restablecer">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
